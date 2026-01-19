@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    display: flex;
+    font-family: sans-serif;
+}
+
+#sidebar {
+    width: 220px;
+    padding: 8px;
+    border-right: 1px solid #ccc;
+    overflow-y: auto;
+    background: #fafafa;
+}
+
+#menu button {
+    width: 100%;
+    margin-bottom: 4px;
+    padding: 6px;
+    border: none;
+    cursor: pointer;
+    background: #eee;
+}
+
+#menu button.active {
+    background: #4caf50;
+    color: #fff;
+}
+
+#legend {
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+.legend-color {
+    width: 12px;
+    height: 12px;
+    margin-right: 6px;
+    border-radius: 50%;
+}
+
+#map {
+    flex: 1;
+    height: 100vh;
+}
+
+#loading {
+    position: absolute;
+    inset: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    background: rgba(255, 255, 255, 0.7);
+    z-index: 999;
+}
+
+/* ラベル1~3まとめのボックス */
+.box-labels {
+    background-color: #e0f7f1;
+    padding: 5px 10px;
+    border-radius: 8px;
+    margin-bottom: 4px;
+}
+
+.label-name {
+    font-weight: bold;
+    color: #2a7f62;
+}
+
+/* 住所 */
+.box-address {
+    background-color: #f0f8ff;
+    padding: 4px 8px;
+    border-radius: 6px;
+    margin-bottom: 4px;
+    font-size: 0.9em;
+}
+
+/* 備考 */
+.box-note {
+    background-color: #f5f5f5;
+    padding: 4px 8px;
+    border-radius: 6px;
+    margin-bottom: 4px;
+    font-size: 0.9em;
+    font-style: italic;
+    color: #555;
+}
+
+/* カテゴリバッジ */
+.badge-category {
+    display: inline-block;
+    background-color: #f39c12;
+    color: white;
+    font-weight: bold;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.85em;
+    margin-bottom: 4px;
+}
