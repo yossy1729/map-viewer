@@ -96,7 +96,7 @@ body {
 /* カテゴリバッジ */
 .badge-category {
     display: inline-block;
-    background-color: #f39c12;
+    background-color: #333;
     color: white;
     font-weight: bold;
     padding: 2px 8px;
