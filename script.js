@@ -257,3 +257,20 @@ function buildLegend() {
 
 // ================================
 init();
+
+document.addEventListener("DOMContentLoaded", () => {
+    const hamburger = document.getElementById("hamburger");
+    const sidebar = document.getElementById("sidebar");
+
+    hamburger.addEventListener("click", () => {
+        sidebar.classList.toggle("active");
+        hamburger.classList.toggle("active");
+
+        // アイコン切替
+        if (hamburger.classList.contains("active")) {
+            hamburger.innerHTML = "&times;"; // ✕
+        } else {
+            hamburger.innerHTML = "&#9776;"; // ☰
+        }
+    });
+});
