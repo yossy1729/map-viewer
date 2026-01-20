@@ -22,6 +22,20 @@ const CATEGORY_COLORS = [
     "gray",
     "cadetblue",
 ];
+const CATEGORY_COLOR_CODES = {
+    red: "#D63E2A",
+    darkred: "#A23336",
+    blue: "#2A81CB",
+    green: "#2AAD27",
+    orange: "#FF7800",
+    purple: "#9C2BCB",
+    brown: "#A0522D",
+    pink: "#FF69B4",
+    cyan: "#00CED1",
+    yellow: "#FFD700",
+    gray: "#7B7B7B",
+    cadetblue: "#3E8E9E",
+};
 
 // ================================
 // URLパラメータ
@@ -222,11 +236,15 @@ function addMarker(d, isCommon = false) {
     if (!clusters[category]) {
         clusters[category] = L.markerClusterGroup({
             iconCreateFunction: (cluster) => {
-                const firstColor =
+                const colorName =
                     cluster.getAllChildMarkers()[0].options.icon.options
                         .markerColor || "gray";
+                const bgColor = CATEGORY_COLOR_CODES[colorName] || "#7B7B7B";
+                // const firstColor =
+                //     cluster.getAllChildMarkers()[0].options.icon.options
+                //         .markerColor || "gray";
                 return L.divIcon({
-                    html: `<div style="background:${firstColor};border-radius:50%;width:30px;height:30px;color:#fff;display:flex;align-items:center;justify-content:center;">${cluster.getChildCount()}</div>`,
+                    html: `<div style="background:${bgColor};border-radius:50%;width:30px;height:30px;color:#fff;display:flex;align-items:center;justify-content:center;">${cluster.getChildCount()}</div>`,
                     iconSize: [30, 30],
                 });
             },
