@@ -22,6 +22,8 @@ const CATEGORY_COLORS = [
     "gray",
     "cadetblue",
 ];
+
+// MarkerCluster用　ピン色に対するカラーコードを用意
 const CATEGORY_COLOR_CODES = {
     red: "#D63E2A",
     darkred: "#A23336",
@@ -189,7 +191,8 @@ function addMarker(d, isCommon = false) {
     }
 
     // 件数カウント
-    legendData[category] = color;
+    // legendData[category] = color;
+    legendData[category] = CATEGORY_COLOR_CODES[color] || "#7B7B7B";
     legendCount[category] = (legendCount[category] || 0) + 1;
 
     const icon = L.AwesomeMarkers.icon({
