@@ -140,8 +140,8 @@ async function loadMap(commonRow, mapGid, displayRow) {
     buildLegend();
 
     const center =
-        displayRow["中心lat"] && displayRow["中心lng"]
-            ? [Number(displayRow["中心lat"]), Number(displayRow["中心lng"])]
+        displayRow["中心緯度"] && displayRow["中心経度"]
+            ? [Number(displayRow["中心緯度"]), Number(displayRow["中心経度"])]
             : DEFAULT_CENTER;
     const zoom = displayRow["初期ズーム"]
         ? Number(displayRow["初期ズーム"])
